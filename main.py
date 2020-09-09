@@ -14,12 +14,17 @@ def pin_generator(length):
 
 # print(pin_generator(5))
 
-def pass_generator(length):
+def pass_generator(length, type="d"):
+    if type == "d":
+        SET = [LOWER_CASES, UPPER_CASES, SPECIAL_CHARS, NUMBERS]
+    elif type == "an":
+        SET = [LOWER_CASES, UPPER_CASES, NUMBERS]
     password = ""
     for i in range(length):
-        lst = random.choice([LOWER_CASES, UPPER_CASES, SPECIAL_CHARS, NUMBERS])
+        lst = random.choice(SET)
         char = random.choice(lst)
         password = password + char
     return password
 
-print(pass_generator(5))
+print(pass_generator(8))
+print(pass_generator(8, "an"))
