@@ -12,9 +12,10 @@ def pin_generator(length):
         pin = pin + str(digit)
     return pin
 
+# Pin Generator
 # print(pin_generator(5))
 
-def pass_generator(length, type="d"):
+def pass_generator(length = 12, type="d"):
     if type == "d":
         SET = [LOWER_CASES, UPPER_CASES, SPECIAL_CHARS, NUMBERS]
     elif type == "an":
@@ -26,5 +27,6 @@ def pass_generator(length, type="d"):
         password = password + char
     return password
 
-print(pass_generator(8))
-print(pass_generator(8, "an"))
+# Password Generator
+# print(pass_generator(8))
+# print(pass_generator(8, "an"))
