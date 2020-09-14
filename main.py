@@ -5,21 +5,13 @@ UPPER_CASES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
 SPECIAL_CHARS = ['!', '@', '#', '$', '&', '?', '.']
 NUMBERS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
-def pin_generator(length):
-    pin = ""
-    for i in range(length):
-        digit = random.randint(0, 9)
-        pin = pin + str(digit)
-    return pin
-
-# Pin Generator
-# print(pin_generator(5))
-
 def pass_generator(length = 12, type="d"):
     if type == "d":
         SET = [LOWER_CASES, UPPER_CASES, SPECIAL_CHARS, NUMBERS]
     elif type == "an":
         SET = [LOWER_CASES, UPPER_CASES, NUMBERS]
+    elif type == "p":
+        SET = [NUMBERS]
     password = ""
     for i in range(length):
         lst = random.choice(SET)
@@ -30,3 +22,4 @@ def pass_generator(length = 12, type="d"):
 # Password Generator
 # print(pass_generator(8))
 # print(pass_generator(8, "an"))
+print(pass_generator(8, "p"))
