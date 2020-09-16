@@ -22,4 +22,4 @@ def pass_generator(length = 12, type="d"):
 # Password Generator
 # print(pass_generator(8))
 # print(pass_generator(8, "an"))
-print(pass_generator(8, "p"))
+# print(pass_generator(8, "p"))
