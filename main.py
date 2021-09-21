@@ -1,4 +1,14 @@
+from os import listdir
 import random
+
+DATAFILE = "data.json"
+
+if DATAFILE not in listdir():
+    print("DATAFILE not found")
+    if not input("ENTER to create one: "):
+        file = open(DATAFILE, "w")
+        file.close()
+        print("DATAFILE created")
 
 LOWER_CASES = [chr(i) for i in range(65, 91)]
 UPPER_CASES = [chr(i) for i in range(97, 123)]
