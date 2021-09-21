@@ -1,9 +1,10 @@
 # Password Generator
 
-## length
-
-any natural number
+## custom length
 
 - "d": default
 - "an": alphanumeric
 - "p": pin
+
+Future Feature
+Password Generation and Saving
